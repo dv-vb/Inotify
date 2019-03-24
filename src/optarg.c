@@ -24,10 +24,17 @@ static n_opt_t g_optss[] = {
 };
 
 static char g_watch_path[OPT_DESCRIPTION_LEN];
+static char g_target_path[OPT_DESCRIPTION_LEN];
+static uint32_t g_arg_flags;
 
 char *get_watch_path(void)
 {
     return g_watch_path;
+}
+
+char *get_target_path(void)
+{
+    return g_target_path;
 }
 
 static void parse_option(char *str)
@@ -133,6 +140,7 @@ void get_usage_option(int argc, char **argv)
             break;
         case 'd':
             /* we need set daemonaize flag first. */
+            g_arg_flags | ARG_WITH_DARMON;
             break;
         case 't':
             printf("action target folder is (%s)\r\n", optarg);
