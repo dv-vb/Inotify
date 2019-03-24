@@ -1,3 +1,15 @@
+/*
+ * Copyright(C) 2017 Victor Wu. All rights reserved.
+ */
+/*
+ * inotify.c
+ * Original Author: hxyjxxx@gmail.com , 2017.6.15.-11:49:33am
+ *
+ * inotify inotify.c
+ *
+ * History
+ */
+
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
